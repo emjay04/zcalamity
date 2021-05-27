@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".DashboardActivity">
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="wrap_content"
+        android:layout_height="174dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/weather" />
+
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="wrap_content"
+        android:layout_height="174dp"
+        android:src="@drawable/river"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/img1"/>
+    <ImageView
+        android:id="@+id/img3"
+        android:layout_width="wrap_content"
+        android:layout_height="174dp"
+        android:src="@drawable/evacuation"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/img2"/>
+
+    <Button
+        android:id="@+id/btnWeather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Weather Monitor"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:layout_below="@+id/img1"/>
+    <Button
+        android:id="@+id/btnRiver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="River Watch"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:layout_below="@+id/img2"/>
+    <Button
+        android:id="@+id/btnEvac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Evacuation Sites"
+        android:textSize="15dp"
+        android:textColor="@color/white"
+        android:layout_below="@+id/img3"/>
+
+</RelativeLayout>

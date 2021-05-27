@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".ResidentActivity">
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Let's create your profile"
+        android:textColor="@color/black"
+        android:layout_marginTop="50dp"
+        android:textSize="15dp"/>
+
+    <EditText
+        android:id="@+id/un"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt"
+        android:layout_marginTop="30dp"
+        android:hint="Full Name"
+        android:inputType="textPersonName" />
+    <EditText
+        android:id="@+id/mn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Mobile No."
+        android:inputType="number"
+        android:layout_below="@+id/un"/>
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Where do you live? (Please use exact address in case of emergencies)"
+        android:textSize="15dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/mn"/>
+    <EditText
+        android:id="@+id/city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="City"
+        android:layout_below="@+id/txt1"/>
+    <EditText
+        android:id="@+id/brngy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Barangay"
+        android:layout_below="@+id/city"/>
+    <EditText
+        android:id="@+id/street"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Street"
+        android:layout_below="@+id/brngy"/>
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Submit"
+        android:layout_below="@+id/street"/>
+
+</RelativeLayout>

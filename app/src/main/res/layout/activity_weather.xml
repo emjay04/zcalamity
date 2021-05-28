@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@drawable/bg1"
     android:padding="10dp"
     tools:context=".WeatherActivity">
 
@@ -12,10 +12,10 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#BCF3B8B8"
+        android:background="#41B198F8"
         android:text="Weather Monitor"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="40dp" />
 
     <EditText
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:hint="Enter City Name"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="20dp"/>
 
     <Button
@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Search Weather"
+        android:text="Search"
         android:layout_below="@+id/cityname"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -44,52 +44,63 @@
         android:background="#59EA9696">
 
         <TextView
-            android:id="@+id/location"
+            android:id="@+id/country"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="14dp"
-            android:text="Location"
+            android:layout_marginTop="20dp"
+            android:text="Country"
             android:textColor="@color/black"
             android:textSize="20dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/brngy"
+            android:id="@+id/city"
             android:layout_width="wrap_content"
             android:layout_height="21dp"
-            android:layout_marginStart="15dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
-            android:text="Barangay"
+            android:text="City"
             android:textColor="@color/black"
             android:textSize="20dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/location" />
+            app:layout_constraintStart_toEndOf="@+id/country"
+            app:layout_constraintTop_toTopOf="parent" />
+
 
         <TextView
-            android:id="@+id/municipality"
+            android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
-            android:text="Municipality"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/brngy" />
-
-        <TextView
-            android:id="@+id/type"
-            android:layout_width="107dp"
-            android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginTop="20dp"
-            android:text="Type Name"
+            android:text="Date || Time"
             android:textColor="@color/black"
             android:textSize="20dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/municipality" />
+            app:layout_constraintTop_toBottomOf="@+id/country" />
+
+        <TextView
+            android:id="@+id/temp"
+            android:layout_width="341dp"
+            android:layout_height="106dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:text="°C"
+            android:textColor="@color/black"
+            android:textSize="80dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -106,7 +117,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginTop="20dp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:text="Latitude"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -115,7 +126,7 @@
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:layout_marginStart="15dp"
             android:layout_marginTop="20dp"
             android:text="Longitude"
@@ -126,7 +137,7 @@
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:layout_marginStart="15dp"
             android:layout_marginTop="20dp"
             android:text="Humidity"
@@ -137,7 +148,7 @@
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:layout_marginStart="15dp"
             android:layout_marginTop="20dp"
             android:text="Sunrise"
@@ -148,7 +159,7 @@
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:layout_marginStart="15dp"
             android:layout_marginTop="20dp"
             android:text="Sunset"
@@ -159,7 +170,7 @@
             android:id="@+id/textView12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:layout_marginStart="15dp"
             android:layout_marginTop="20dp"
             android:text="Pressure"
@@ -170,7 +181,7 @@
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:layout_marginStart="15dp"
             android:layout_marginTop="20dp"
             android:text="Wind Speed"
@@ -184,6 +195,7 @@
             android:layout_marginStart="140dp"
             android:layout_marginTop="20dp"
             android:text="Latitude"
+            android:textColor="@color/white"
             app:layout_constraintStart_toEndOf="@+id/textView7"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -194,6 +206,7 @@
             android:layout_marginStart="128dp"
             android:layout_marginTop="20dp"
             android:text="Longitude"
+            android:textColor="@color/white"
             app:layout_constraintStart_toEndOf="@+id/textView8"
             app:layout_constraintTop_toBottomOf="@+id/Latitude" />
 
@@ -204,6 +217,7 @@
             android:layout_marginStart="135dp"
             android:layout_marginTop="20dp"
             android:text="Humidity"
+            android:textColor="@color/white"
             app:layout_constraintStart_toEndOf="@+id/textView9"
             app:layout_constraintTop_toBottomOf="@+id/Longitude" />
 
@@ -214,6 +228,7 @@
             android:layout_marginStart="144dp"
             android:layout_marginTop="20dp"
             android:text="Sunrise"
+            android:textColor="@color/white"
             app:layout_constraintStart_toEndOf="@+id/textView10"
             app:layout_constraintTop_toBottomOf="@+id/Humidity" />
 
@@ -224,6 +239,7 @@
             android:layout_marginStart="148dp"
             android:layout_marginTop="20dp"
             android:text="Sunset"
+            android:textColor="@color/white"
             app:layout_constraintStart_toEndOf="@+id/textView11"
             app:layout_constraintTop_toBottomOf="@+id/Sunrise" />
 
@@ -234,6 +250,7 @@
             android:layout_marginStart="137dp"
             android:layout_marginTop="20dp"
             android:text="Pressure"
+            android:textColor="@color/white"
             app:layout_constraintStart_toEndOf="@+id/textView12"
             app:layout_constraintTop_toBottomOf="@+id/Sunset" />
 
@@ -244,6 +261,7 @@
             android:layout_marginStart="117dp"
             android:layout_marginTop="20dp"
             android:text="Wind Speed"
+            android:textColor="@color/white"
             app:layout_constraintStart_toEndOf="@+id/textView13"
             app:layout_constraintTop_toBottomOf="@+id/Pressure" />
     </androidx.constraintlayout.widget.ConstraintLayout>
